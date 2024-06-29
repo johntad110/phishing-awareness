@@ -45,7 +45,10 @@ function App() {
     <div className="min-h-screen">
       <Navbar />
       <div className="flex flex-col items-center">
-        {showForm && <FormInput onStart={handleStart} />}
+        {showForm && ( <>
+          <Status />
+          <FormInput onStart={handleStart} />
+        </>)}
         {showQuestions && (
           <>
             <Status
