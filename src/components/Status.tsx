@@ -14,7 +14,7 @@ const Status: React.FC<StatusProps> = ({
     const progress = (currentQuestion / totalQuestions) * 100;
 
     return (
-        <div className="bg-gray-800 w-[90%] md:min-w-[600px] min-h-28 rounded-2xl mt-8 p-6 flex flex-col items-center justify-between">
+        <div className="bg-gray-800 w-[80%] md:min-w-[600px] min-h-28 rounded-ss-2xl rounded-se-2xl mt-24 p-6 flex flex-col items-center justify-between">
             <div className='w-full flex justify-between items-center mb-4'>
                 <div className='text-white text-xl font-[Halant]'>
                     {currentQuestion} / {totalQuestions}
