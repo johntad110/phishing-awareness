@@ -8,8 +8,8 @@ import Questionnaire from "./components/Questionnaire";
 import qna from "./data/questions.json";
 
 export interface QnA {
-  question: String,
-  choice: String[],
+  question: string,
+  choice: string[],
   answer: number
 }
 
