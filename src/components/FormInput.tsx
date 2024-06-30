@@ -15,8 +15,8 @@ const FormInput: React.FC<FormInputProps> = ({ onStart }) => {
     }
 
     return (
-        <div className="mt-8 border border-black p-8 w-[80%]">
-            <form onSubmit={handleSubmit} className="flex flex-col items-center md:min-w-[600px] mt-6 p-6 min-h-28">
+        <div className="mt-8 border border-gray-400 p-8 w-[80%] rounded-b-2xl">
+            <form onSubmit={handleSubmit} className="flex flex-col items-center md:min-w-[600px] min-h-28">
                 <input
                     type="text"
                     placeholder="Enter your name"
@@ -33,7 +33,7 @@ const FormInput: React.FC<FormInputProps> = ({ onStart }) => {
                     className="border border-black p-2 mb-4 w-80 h-14"
                     required
                 />
-                <button type="submit" className="bg-black text-white py-4 px-16 mt-8 border border-black hover:bg-white hover:text-black transition-all">
+                <button type="submit" className="bg-white text-black py-4 px-16 border border-black hover:bg-black hover:text-white transition-all">
                     Start Quiz
                 </button>
             </form>
