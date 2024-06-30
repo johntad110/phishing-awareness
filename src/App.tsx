@@ -24,10 +24,14 @@ function App() {
       choice: value.choice,
       answer: value.answer
     }));
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentQuestionS, setCurrentQUestionS] = useState(QnAs[currentQuestion]);
 
   const handleStart = () => {
     setShowForm(false);
     setShowQuestions(true);
+    setCurrentQuestion(1);
+    setCurrentQUestionS(QnAs[currentQuestion]);
   };
 
   const handleFinishQuestions = () => {
@@ -39,7 +43,18 @@ function App() {
     setShowForm(true);
     setShowQuestions(false);
     setShowResults(false);
+    setCurrentQuestion(0);
+    setCurrentQUestionS(QnAs[currentQuestion]);
   };
+
+  const handleQuestions = () => {
+        
+  }
+
+  const handleNext = () => {
+    setCurrentQuestion(currentQuestion + 1);
+    setCurrentQUestionS(QnAs[currentQuestion - 1])
+  }
 
   return (
     <div className="min-h-screen">
@@ -52,11 +67,11 @@ function App() {
         {showQuestions && (
           <>
             <Status
-              currentQuestion={5}
+              currentQuestion={currentQuestion}
               totalQuestions={8}
               onRestart={handleRestart}
             />
-            {<Questionnaire QnAs={QnAs} finishQuestion={handleFinishQuestions}/>}
+            {<Questionnaire QnA={currentQuestionS} finishQuestion={handleFinishQuestions} handleNext={handleNext}/>}
           </>
         )}
         {showResults && <ResultsDisplay />}
