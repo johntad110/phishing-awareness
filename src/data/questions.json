@@ -60,7 +60,7 @@
         }
     },
     {
-        "question": "Legitimate websites will always have a secure connection (indicated by a lock icon () in the address bar and https:// at the beginning of the URL).  True or False?",
+        "question": "Legitimate websites will always have a secure connection (indicated by a lock icon (🔒) in the address bar and https:// at the beginning of the URL).  True or False?",
         "choice": [
             "True",
             "False"
