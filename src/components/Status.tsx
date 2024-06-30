@@ -1,5 +1,4 @@
 import { FaRedo } from "react-icons/fa";
-import classNames from 'classnames';
 
 type StatusProps = {
     currentQuestion?: number;
@@ -17,14 +16,9 @@ const Status: React.FC<StatusProps> = ({
 
     const progress = ((currentQuestion ?? 0) / (totalQuestions ?? 1)) * 100;
 
-    const statusClassName = classNames('status', {
-        'w-full flex justify-center items-center py-2': progress === 0,
-        'w-full flex justify-between items-center mb-4': progress != 0,
-    });
-
     return (
         <div className="bg-gray-800 w-[80%] md:min-w-[600px] min-h-28 rounded-ss-2xl rounded-se-2xl mt-24 p-6 flex flex-col items-center justify-between">
-            <div className={statusClassName} >
+            <div className={progress === 0 ? `w-full flex justify-center items-center py-2` : `w-full flex justify-between items-center mb-4`} >
                 {progress != 0 && (<>
                     <div className='text-white text-xl font-[Halant]'>
                         {currentQuestion} / {totalQuestions}
