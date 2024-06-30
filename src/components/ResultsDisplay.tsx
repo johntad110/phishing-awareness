@@ -34,7 +34,7 @@ const calculateMessage = (percentage: number) => {
     message = {
       color: "text-green-500",
       text: "🎉Excellent!🎉",
-      recommendation: "You have a strong understanding of the material. Keep up the good work!",
+      recommendation: "You have a strong understanding phishing techniques. Keep up the good work!",
     };
   } else if (percentage >= 60) {
     message = {
