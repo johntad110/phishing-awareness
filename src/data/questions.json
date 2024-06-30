@@ -5,8 +5,8 @@
         "answer": 0
     },
     {
-        "question": "",
-        "choice": [],
+        "question": "what old is your name?",
+        "choice": ["addis ababa", "John Doe", "10:00PM", "18+"],
         "answer": 0
     }
 ]
