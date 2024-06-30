@@ -23,7 +23,15 @@ function App() {
   const [showQuestions, setShowQuestions] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showResults, setShowResults] = useState(false);
+  const [score, setScore] = useState(0);
+  const [name, setName] = useState('Name-less')
+  const [email, setEmail] = useState('')
+
   const totalQuestions = questions.length;
+
+  const saveEmail = () => {
+    console.log(email)
+  }
 
   const loadQuestions = () => {
     const QnAs: QnA[] = qna.map((value) => ({ value, sort: Math.random() }))
@@ -41,9 +49,13 @@ function App() {
     setQuestions(QnAs)
   }
 
-  const handleStart = () => {
+  const handleStart = (name: string, email: string) => {
+    setName(name);
+    setEmail(email)
     setShowForm(false);
     setShowQuestions(true);
+
+    saveEmail()
   };
 
   const handleNext = () => {
@@ -55,22 +67,33 @@ function App() {
   }
 
   const handleFinishQuestions = () => {
+    const userScore = questions.reduce((acc, question) => {
+      return acc + (question.answer === question.userAnswer ? 1 : 0);
+    }, 0);
+
+    setScore(userScore);
     setShowQuestions(false);
     setShowResults(true);
   };
 
   const handleRestart = () => {
-    setShowForm(true);
-    setShowQuestions(false);
+    setShowQuestions(true);
     setShowResults(false);
+    setQuestions((prevQuestions) => prevQuestions.map((q) => ({ ...q, userAnswer: undefined })))
+    setCurrentQuestion(0);
   };
 
   const handleOnAnswered = (answer_idx: number) => {
-     setQuestions((prevQuestions) => {
+    setQuestions((prevQuestions) => {
       const updatedQuestions = [...prevQuestions];
       updatedQuestions[currentQuestion].userAnswer = answer_idx;
       return updatedQuestions;
-     })
+    })
+  }
+
+  const handleGoBack = () => {
+    setShowResults(false);
+    setShowQuestions(true);
   }
 
   useEffect(() => {
@@ -87,19 +110,28 @@ function App() {
           onRestart={handleRestart}
           showForm={showForm}
         />
-        <Questionnaire
-          qnAs={questions[currentQuestion]}
-          showForm={showForm}
-          showQuestions={showQuestions}
-          onStart={handleStart}
-          onNext={handleNext}
-          onBack={handlePrevious}
-          onAnswered={handleOnAnswered}
-          finishQuestion={handleFinishQuestions}
-          currentQuestion={currentQuestion}
+        {(showQuestions || showForm) && (
+          <Questionnaire
+            qnAs={questions[currentQuestion]}
+            showForm={showForm}
+            showQuestions={showQuestions}
+            onStart={handleStart}
+            onNext={handleNext}
+            onBack={handlePrevious}
+            onAnswered={handleOnAnswered}
+            finishQuestion={handleFinishQuestions}
+            currentQuestion={currentQuestion}
+            totalQuestions={totalQuestions}
+          />
+
+        )}
+        {showResults && <ResultsDisplay
+          score={score}
           totalQuestions={totalQuestions}
-        />
-        {showResults && <ResultsDisplay />}
+          name={name}
+          goBack={handleGoBack}
+          restart={handleRestart}
+        />}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ type QProps = {
     qnAs: QnA;
     showForm: boolean;
     showQuestions: boolean;
-    onStart: () => void;
+    onStart: (name: string, email: string) => void;
     onNext: () => void;
     onBack: () => void;
     finishQuestion: () => void;
@@ -21,7 +21,7 @@ const Questionnaire: React.FC<QProps> = ({ qnAs, showForm, showQuestions, onStar
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        onStart();
+        onStart(name, email);
     }
 
     return (
