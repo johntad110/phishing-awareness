@@ -1,12 +1,74 @@
 [
     {
-        "question": "Lorem epsum ena Lora epsum tru sewoch neberu",
-        "choice": ["neberu", "noru", "u ena le", "hulu bege hulu bedege"],
+        "question": "You receive an email that appears to be from your bank, informing you about suspicious activity on your account. The email asks you to click a link and verify your login details. What should you do?",
+        "choice": [
+            "Click the link and enter your login information immediately.",
+            "Verify the sender's email address carefully. Does it look legitimate? If not, delete the email."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "An urgent pop-up message appears on your screen, claiming your computer is infected with malware. It provides a phone number to call for 'technical support'.  What's the best course of action?",
+        "choice": [
+            "Call the provided phone number to fix the problem.",
+            "Close the pop-up window and run a scan with your antivirus software."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "A friend messages you on social media, asking for your help urgently. They claim their account has been hacked and they need you to forward a verification code they receive via text message.  Should you help them?",
+        "choice": [
+            "Forward the code to your friend without hesitation.",
+            "Contact your friend directly using another method (phone call, separate message) to confirm the situation."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "You receive an email with an enticing offer – a free gift card or a huge discount on a popular product. The email includes a link to claim the offer.  Is it safe to click the link?",
+        "choice": [
+            "Click the link right away to take advantage of the offer.",
+            "Be cautious. If the offer seems too good to be true, it probably is. Do some research on the offer before clicking any links."
+        ],
+        "answer": 1
+    },
+    {
+        "question": "A website asks you to enter your personal information (name, address, etc.) to enter a contest.  Should you provide this information?",
+        "choice": [
+            "True",
+            "False"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Legitimate websites will always have a secure connection (indicated by a lock icon (🔒) in the address bar and https:// at the beginning of the URL).  True or False?",
+        "choice": [
+            "True",
+            "False"
+        ],
         "answer": 0
     },
     {
-        "question": "",
-        "choice": [],
-        "answer": 0
+        "question": "It's safe to click on attachments in emails from unknown senders, as long as the file extension looks familiar (e.g., .docx, .pdf)?",
+        "choice": [
+            "True",
+            "False"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Phishing emails will always contain typos or grammatical errors.  True or False?",
+        "choice": [
+            "True",
+            "False"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "You can safely enter your login credentials on any website that looks similar to a legitimate website you use (e.g., your bank).  True or False?",
+        "choice": [
+            "True",
+            "False"
+        ],
+        "answer": 1
     }
 ]
