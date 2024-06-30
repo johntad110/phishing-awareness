@@ -2,9 +2,10 @@ import { QnA } from "../App";
 
 type QProps = {
     QnAs: QnA[];
+    finishQuestion: () => void;
 }
 
-const Questionnaire: React.FC<QProps> = ({ QnAs }) => {
+const Questionnaire: React.FC<QProps> = ({ QnAs, finishQuestion }) => {
     
     console.log(QnAs[0].question);
     return (

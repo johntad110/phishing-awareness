@@ -56,7 +56,7 @@ function App() {
               totalQuestions={8}
               onRestart={handleRestart}
             />
-            {<Questionnaire QnAs={QnAs}/>}
+            {<Questionnaire QnAs={QnAs} finishQuestion={handleFinishQuestions}/>}
           </>
         )}
         {showResults && <ResultsDisplay />}
