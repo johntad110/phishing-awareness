@@ -9,7 +9,12 @@ import qna from "./data/questions.json";
 export interface QnA {
   question: string,
   choice: string[],
-  answer: number
+  answer: number,
+  explanation: {
+    wrong: string;
+    correct: string;
+  };
+  userAnswer?: number;
 }
 
 function App() {
@@ -26,7 +31,11 @@ function App() {
       .map(({ value }) => ({
         question: value.question,
         choice: value.choice,
-        answer: value.answer
+        answer: value.answer,
+        explanation: {
+          wrong: value.explanation.wrong,
+          correct: value.explanation.correct,
+        }
       }));
 
     setQuestions(QnAs)
@@ -38,11 +47,11 @@ function App() {
   };
 
   const handleNext = () => {
-    setCurrentQuestion((currQue) => currQue += 1)
+    if (currentQuestion !== (totalQuestions - 1)) setCurrentQuestion((currQue) => currQue += 1)
   }
 
   const handlePrevious = () => {
-    setCurrentQuestion((currQue) => currQue -= 1)
+    if (currentQuestion !== 0) setCurrentQuestion((currQue) => currQue -= 1)
   }
 
   const handleFinishQuestions = () => {
@@ -55,6 +64,14 @@ function App() {
     setShowQuestions(false);
     setShowResults(false);
   };
+
+  const handleOnAnswered = (answer_idx: number) => {
+     setQuestions((prevQuestions) => {
+      const updatedQuestions = [...prevQuestions];
+      updatedQuestions[currentQuestion].userAnswer = answer_idx;
+      return updatedQuestions;
+     })
+  }
 
   useEffect(() => {
     loadQuestions();
@@ -77,7 +94,10 @@ function App() {
           onStart={handleStart}
           onNext={handleNext}
           onBack={handlePrevious}
+          onAnswered={handleOnAnswered}
           finishQuestion={handleFinishQuestions}
+          currentQuestion={currentQuestion}
+          totalQuestions={totalQuestions}
         />
         {showResults && <ResultsDisplay />}
       </div>
