@@ -67,7 +67,7 @@
         ],
         "answer": 0,
         "explanation": {
-            "correct": "This statement is True. Legitimate websites will always have a secure connection (HTTPS) indicated by a lock icon () in the address bar and https:// at the beginning of the URL. This ensures encrypted communication between your browser and the website, protecting your data.",
+            "correct": "This statement is True. Legitimate websites will always have a secure connection (HTTPS) indicated by a lock icon (🔒) in the address bar and https:// at the beginning of the URL. This ensures encrypted communication between your browser and the website, protecting your data.",
             "wrong": "Insecure websites (HTTP) lack the lock icon and encryption, making them vulnerable to eavesdropping. Phishing scams often use insecure connections to steal your information."
         }
     },
