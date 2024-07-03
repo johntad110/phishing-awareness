@@ -1,110 +1,198 @@
 [
-    {
-        "question": "You receive an email that appears to be from your bank, informing you about suspicious activity on your account. The email asks you to click a link and verify your login details. What should you do?",
-        "choice": [
-            "Click the link and enter your login information immediately.",
-            "Verify the sender's email address carefully. Does it look legitimate? If not, delete the email."
-        ],
-        "answer": 1,
-        "explanation": {
-            "correct": "Never click on links or enter your login information in emails. Contact your bank directly using a phone number you know is correct to verify the suspicious activity.",
-            "wrong": "Clicking the link could take you to a fake website designed to steal your login information. Phishing emails often try to create a sense of urgency to pressure you into acting quickly without thinking."
+    [
+        {
+            "question": "You receive an email that appears to be from your bank, informing you about suspicious activity on your account. The email asks you to click a link and verify your login details. What should you do?",
+            "choice": [
+                "Click the link and enter your login information immediately.",
+                "Verify the sender's email address carefully. Does it look legitimate? If not, delete the email."
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "Never click on links or enter your login information in emails. Contact your bank directly using a phone number you know is correct to verify the suspicious activity.",
+                "wrong": "Clicking the link could take you to a fake website designed to steal your login information. Phishing emails often try to create a sense of urgency to pressure you into acting quickly without thinking."
+            }
+        },
+        {
+            "question": "An urgent pop-up message appears on your screen, claiming your computer is infected with malware. It provides a phone number to call for 'technical support'.  What's the best course of action?",
+            "choice": [
+                "Call the provided phone number to fix the problem.",
+                "Close the pop-up window and run a scan with your antivirus software."
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "Pop-up messages claiming malware infection are a common tactic used by scammers. Close the pop-up window (without clicking anything) and run a scan with your trusted antivirus software.",
+                "wrong": "Calling the provided number could connect you to scammers who will try to trick you into giving them remote access to your computer or paying for unnecessary services."
+            }
+        },
+        {
+            "question": "A friend messages you on social media, asking for your help urgently. They claim their account has been hacked and they need you to forward a verification code they receive via text message.  Should you help them?",
+            "choice": [
+                "Forward the code to your friend without hesitation.",
+                "Contact your friend directly using another method (phone call, separate message) to confirm the situation."
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "Don't forward the code. Scammers can hijack accounts and impersonate your friends. Contact your friend directly using a different method (call, separate message) to confirm the situation.",
+                "wrong": "Forwarding the code could allow the scammer to gain access to your friend's account, potentially compromising their personal information or security."
+            }
+        },
+        {
+            "question": "You receive an email with an enticing offer – a free gift card or a huge discount on a popular product. The email includes a link to claim the offer.  Is it safe to click the link?",
+            "choice": [
+                "Click the link right away to take advantage of the offer.",
+                "Be cautious. If the offer seems too good to be true, it probably is. Do some research on the offer before clicking any links."
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "Be cautious with enticing offers. Phishing emails often lure victims with promises of free gifts or discounts. Do some research on the offer before clicking any links. Verify the legitimacy of the offer through the official website of the company.",
+                "wrong": "Clicking the link could take you to a malicious website designed to steal your personal information or infect your device with malware."
+            }
+        },
+        {
+            "question": "A website asks you to enter your personal information (name, address, etc.) to enter a contest.  Should you provide this information?",
+            "choice": [
+                "True",
+                "False"
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "Don't provide your personal information unless you trust the website. Legitimate contests typically don't require excessive personal information to enter.",
+                "wrong": "Sharing your personal information with untrusted websites can be risky. They could use it for spam or even identity theft."
+            }
+        },
+        {
+            "question": "Legitimate websites will always have a secure connection (indicated by a lock icon (🔒) in the address bar and https:// at the beginning of the URL).  True or False?",
+            "choice": [
+                "True",
+                "False"
+            ],
+            "answer": 0,
+            "explanation": {
+                "correct": "This statement is True. Legitimate websites will always have a secure connection (HTTPS) indicated by a lock icon (🔒) in the address bar and https:// at the beginning of the URL. This ensures encrypted communication between your browser and the website, protecting your data.",
+                "wrong": "Insecure websites (HTTP) lack the lock icon and encryption, making them vulnerable to eavesdropping. Phishing scams often use insecure connections to steal your information."
+            }
+        },
+        {
+            "question": "It's safe to click on attachments in emails from unknown senders, as long as the file extension looks familiar (e.g., .docx, .pdf)?",
+            "choice": [
+                "True",
+                "False"
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "This statement is False. Never click on attachments in emails from unknown senders, even if the file extension looks familiar. Attachments can contain malware disguised as common file types.",
+                "wrong": "Malicious actors can embed malware in any file type. If you suspect an attachment, verify its legitimacy with the sender through a trusted channel (phone call you initiated, not a reply to the email)."
+            }
+        },
+        {
+            "question": "Phishing emails will always contain typos or grammatical errors.  True or False?",
+            "choice": [
+                "True",
+                "False"
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "This statement is False. Phishing emails can be very sophisticated and appear legitimate, with proper grammar and spelling. Don't rely solely on typos or errors to identify phishing attempts.",
+                "wrong": "Phishers constantly improve their tactics. Be cautious of emails that create a sense of urgency, request personal information, or have suspicious links or attachments, even if they appear well-written."
+            }
+        },
+        {
+            "question": "You can safely enter your login credentials on any website that looks similar to a legitimate website you use (e.g., your bank).  True or False?",
+            "choice": [
+                "True",
+                "False"
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "This statement is False. Never enter your login credentials on websites that look similar to legitimate ones. These could be imposter sites designed to steal your information.",
+                "wrong": "Always double-check the website address before entering your login details. Look for the secure connection (lock icon and https://) and verify you're on the official website of the intended service."
+            }
         }
-    },
-    {
-        "question": "An urgent pop-up message appears on your screen, claiming your computer is infected with malware. It provides a phone number to call for 'technical support'.  What's the best course of action?",
-        "choice": [
-            "Call the provided phone number to fix the problem.",
-            "Close the pop-up window and run a scan with your antivirus software."
-        ],
-        "answer": 1,
-        "explanation": {
-            "correct": "Pop-up messages claiming malware infection are a common tactic used by scammers. Close the pop-up window (without clicking anything) and run a scan with your trusted antivirus software.",
-            "wrong": "Calling the provided number could connect you to scammers who will try to trick you into giving them remote access to your computer or paying for unnecessary services."
+    ],
+    [
+        {
+            "question": "ከባንኩ እንደ ተሰማው የሚያስጠንቀቅ እቃ አይነት ያለው ኢሜል ተቀብለህ አካውንትህ ላይ እንደሚፈለጉ እንክብካቤዎች አንደሆነ ይነግሩሃል። ኢሜሉ አገባብን ማረጋገጥና የግባትን ዝርዝር እንዲግባ ይጠይቃል። ምን መፈጸም አለብህ?",
+            "choice": [
+                "አገባብን እና የግባትን ዝርዝር አስቸኳይ ለማስገባት እንዲገባ አርጋግተህ እንግባ።",
+                "የላኪውን ኢሜል አድራሻ በትክክል አረጋግጥ። እርግጠኛ ከሆነ ኢሜሉን ስለማስወገድ።"
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "ከቶ አገባብን አርጋግተህ እና የግባትን ዝርዝር አትግባበት። በሚታውቀው ስልክ ቁጥር በቀጥታ ከባንኩ እርግጠኛ ሆነህ ማረጋገጥ ይቻላል።",
+                "wrong": "አገባብን እንዲገባ ማርጋገጫው ሊያንቀሳቀስ ተብሎ በትክክል እንደ ታውሞት እንዲሆን አይቻልም። የማያስፈልገው እንክብካቤን በማሳየት የሚከብድ ኢሜል ብዙ ጊዜ የማርጋገጫ ምክንያት ሲሆን እንዲገባብ ይገድዳል።"
+            }
+        },
+        {
+            "question": "እንደ ተጎድቷል የሚያሳውቅ ቅርብ መልዕክት ያለው ፖፖ መልዕክት ከኮምፒውተርህ ላይ ይታየኛል። ችግሩን ለመቀየር ለቴክኒክ ድጋፍ 'ቁጥር' ይለቀቃል። የሚሻለው ቅንጅት ምንድን ነው?",
+            "choice": [
+                "ለቀቀው ቁጥር ይደውሉ ችግሩን ለማስተካከል።",
+                "ፖፖ መልዕክቱን ዝጋች እና በታመኝ አንቲቫይረስ ሶፍትዌር እንዲቃኙት አቅርበዋል።"
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "ፖፖ መልዕክቶች የሚከብዱት የተጎዱ ስርአትን ማሳያ አጋልቦ ነው። ፖፖ መልዕክቱን እንደምታቀብል ያደርግቶ ሌላውን አንቲቫይረስ ሶፍትዌር ማቃኛ እንዲሆን ይከልላል።",
+                "wrong": "ለቀቀው ቁጥር በቀጥታ የተገናኝነት አድርገዋል። አይታወቅም ከተኛ ማስተካከል የማይለቀስ አገልጋይ ማድረግ ይችላሉ።"
+            }
+        },
+        {
+            "question": "እንደተዘረጋው በሶሻል ሚዲያ የሚጠይቅ ወዳጅህ በችግር እንዳሉ ይሰማሉ። እነርሱ እንዳተጠረቀ እንዲሆን እንዳተናቀ የሚሉትን በአስቸኳይ ኮድ ማስተላለፍ ይጠይቃሉ። ለመርዳት እንዴት ይደረጋሉ?",
+            "choice": [
+                "በምንም ሐሳብ ኮዱን ለወዳጅህ አትልክብም።",
+                "በሌላ የታመን የመገናኘት ሁኔታ (ስልክ ጥሪ፣ ሌላ መልዕክት) ለመከማች ወዳጅህን በቀጥታ አግኝ።"
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "ኮዱን አትልክብም። በአንተ ወዳጅ ማስታወቂያ እንዲሆን ሊያጠቃል ይችላል። በሌላ አስቸኳይ የመገናኘት ሁኔታ በቀጥታ ለማረጋገጥ እንደምታግኝ እንድታረጋገጥ አረጋግጥ።",
+                "wrong": "በማስታወቂያ ሊያጠቃል ይችላል። ከተጎታው ወዳጅ በቀጥታ አግኝ እንዲሆን ይሻላል።"
+            }
+        },
+        {
+            "question": "አስማሚ እና ታዳሚ ቅርብ እቃ ይዟቸዋል - ነፃ ልብስ ቅርጫት ወይም በጣም ታዋቂ ምርት ላይ ታላቅ ቅናሽ። እቃ ለመቀበል ሊካ አለበት። ሊካ ትገብበታለህ?",
+            "choice": [
+                "እቃውን ለመቀበል በአስቸኳይ ሊካ ገብተህ አድርገህ እንግባ።",
+                "ጥንቃቄ ይውላል። እንደታይቀበል እንደነገሩ እንደሚገለጥ አረጋግጥ። እንዳምልክት በአስቸኳይ ገባት ማረጋገጥ ይቻላል።"
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "በእቃ እንደታይቀበል ጥንቃቄ ይውላል። በእንክብካቤ አስቸኳይ ገባት በትክክል እንደሚሆን አረጋግጥ። እቃ እንዳምልክት እንደነገሩ አረጋግጥ።",
+                "wrong": "በአገባብ እንዳምልክት እንደሚሆን ይታወቃል። በማስታወቂያ የተነደደ አንተ ያጠቃል።"
+            }
+        },
+        {
+            "question": "ድምጻቸውን ለመሳተፍ ወቅታቸውን ይጠይቃሉ (ስም, አድራሻ ወዘተ) ሊገባቸው አለበት። እንደሚሆን ምን ነው?",
+            "choice": [
+                "እውነት",
+                "ሐሰት"
+            ],
+            "answer": 1,
+            "explanation": {
+                "correct": "ለመሳተፍ በራስህ ይታመን ካልኸው ግን አልተላለፍ። አንተን በማስታወቂያ ሊያጠቃል ታስቦ ነው።",
+                "wrong": "በራስህ በሌላ አይታመን ያልኸውን ያጠቃል። በማስታወቂያ በማስታወቂያ ታዋቂ ሲሆን ሊበላበል ይችላል።"
+            }
+        },
+        {
+            "question": "ሐበሻ ድርጅቶች የታመኑ አገናኝነት (በአድራሻ ሳይነት የታመኑ ምልክት (🔒) በአስተማማኝ የአስተማማኝ አንተ አድራሻ) ይኖራል። እውነት ወይም ሐሰት?",
+            "choice": [
+                "እውነት",
+                "ሐሰት"
+            ],
+            "answer": 0,
+            "explanation": {
+                "correct": "ይህ እውነት ነው። በታመኑ አገናኝነት (HTTPS) ያለው የታመኑ ስፍራዎች በአድራሻ ሳይነት የታመኑ ምልክት (🔒) እና https:// በአስተማማኝ ምንጭ አገናኝነት እንደሆነ እውነት ነው። ይህ በእነርሱ እና በሌላ አድራሻ ውስጥ እንዲሆን ይጠብቃል።",
+                "wrong": "እንዳይታመን የተሳሳተ አንተ አገናኝነት ይኖርበታል። የማስታወቂያ በራስህ የሚሆን እንደማይታወቅ አገናኝነት ይጠብቃል።"
+            }
+        },
+        {
+            "question": "እንደሚታወቅ ከማይታወቅ ተላኪዎች አባለነት የሚያደርጉት የታመኑ አንተ ዝግጅት (፣ የትኬት እና ሌሎች ውስጥ እናረጋግጥ) ይኖራል። እውነት ወይም ሐሰት?",
+            "choice": [
+                "እውነት",
+                "ሐሰት"
+            ],
+            "answer": 0,
+            "explanation": {
+                "correct": "በእንክብካቤ የማይታወቅ ተላኪዎች እንደሚሰጠኝ እንዳለው ታስቦ እንዲሆን በእንክብካቤ በራስህ ያጠቃል።",
+                "wrong": "በታመኑ አገናኝነት እንደሚሰጠኝ እንዳለው ተላኝነት ይኖርበታል። እንክብካቤ በራስህ ያጠቃል።"
+            }
         }
-    },
-    {
-        "question": "A friend messages you on social media, asking for your help urgently. They claim their account has been hacked and they need you to forward a verification code they receive via text message.  Should you help them?",
-        "choice": [
-            "Forward the code to your friend without hesitation.",
-            "Contact your friend directly using another method (phone call, separate message) to confirm the situation."
-        ],
-        "answer": 1,
-        "explanation": {
-            "correct": "Don't forward the code. Scammers can hijack accounts and impersonate your friends. Contact your friend directly using a different method (call, separate message) to confirm the situation.",
-            "wrong": "Forwarding the code could allow the scammer to gain access to your friend's account, potentially compromising their personal information or security."
-        }
-    },
-    {
-        "question": "You receive an email with an enticing offer – a free gift card or a huge discount on a popular product. The email includes a link to claim the offer.  Is it safe to click the link?",
-        "choice": [
-            "Click the link right away to take advantage of the offer.",
-            "Be cautious. If the offer seems too good to be true, it probably is. Do some research on the offer before clicking any links."
-        ],
-        "answer": 1,
-        "explanation": {
-            "correct": "Be cautious with enticing offers. Phishing emails often lure victims with promises of free gifts or discounts. Do some research on the offer before clicking any links. Verify the legitimacy of the offer through the official website of the company.",
-            "wrong": "Clicking the link could take you to a malicious website designed to steal your personal information or infect your device with malware."
-        }
-    },
-    {
-        "question": "A website asks you to enter your personal information (name, address, etc.) to enter a contest.  Should you provide this information?",
-        "choice": [
-            "True",
-            "False"
-        ],
-        "answer": 1,
-        "explanation": {
-            "correct": "Don't provide your personal information unless you trust the website. Legitimate contests typically don't require excessive personal information to enter.",
-            "wrong": "Sharing your personal information with untrusted websites can be risky. They could use it for spam or even identity theft."
-        }
-    },
-    {
-        "question": "Legitimate websites will always have a secure connection (indicated by a lock icon (🔒) in the address bar and https:// at the beginning of the URL).  True or False?",
-        "choice": [
-            "True",
-            "False"
-        ],
-        "answer": 0,
-        "explanation": {
-            "correct": "This statement is True. Legitimate websites will always have a secure connection (HTTPS) indicated by a lock icon (🔒) in the address bar and https:// at the beginning of the URL. This ensures encrypted communication between your browser and the website, protecting your data.",
-            "wrong": "Insecure websites (HTTP) lack the lock icon and encryption, making them vulnerable to eavesdropping. Phishing scams often use insecure connections to steal your information."
-        }
-    },
-    {
-        "question": "It's safe to click on attachments in emails from unknown senders, as long as the file extension looks familiar (e.g., .docx, .pdf)?",
-        "choice": [
-            "True",
-            "False"
-        ],
-        "answer": 1,
-        "explanation": {
-            "correct": "This statement is False. Never click on attachments in emails from unknown senders, even if the file extension looks familiar. Attachments can contain malware disguised as common file types.",
-            "wrong": "Malicious actors can embed malware in any file type. If you suspect an attachment, verify its legitimacy with the sender through a trusted channel (phone call you initiated, not a reply to the email)."
-        }
-    },
-    {
-        "question": "Phishing emails will always contain typos or grammatical errors.  True or False?",
-        "choice": [
-            "True",
-            "False"
-        ],
-        "answer": 1,
-        "explanation": {
-            "correct": "This statement is False. Phishing emails can be very sophisticated and appear legitimate, with proper grammar and spelling. Don't rely solely on typos or errors to identify phishing attempts.",
-            "wrong": "Phishers constantly improve their tactics. Be cautious of emails that create a sense of urgency, request personal information, or have suspicious links or attachments, even if they appear well-written."
-        }
-    },
-    {
-        "question": "You can safely enter your login credentials on any website that looks similar to a legitimate website you use (e.g., your bank).  True or False?",
-        "choice": [
-            "True",
-            "False"
-        ],
-        "answer": 1,
-        "explanation": {
-            "correct": "This statement is False. Never enter your login credentials on websites that look similar to legitimate ones. These could be imposter sites designed to steal your information.",
-            "wrong": "Always double-check the website address before entering your login details. Look for the secure connection (lock icon and https://) and verify you're on the official website of the intended service."
-        }
-    }
+    ]    
 ]
