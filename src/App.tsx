@@ -5,6 +5,7 @@ import Status from "./components/Status";
 import ResultsDisplay from "./components/ResultsDisplay";
 import Questionnaire from "./components/Questionnaire";
 import qna from "./data/questions.json";
+import {LanguageProvider} from "./components/LanguageContext.tsx";
 
 export interface QnA {
   question: string,
@@ -34,7 +35,7 @@ function App() {
   }
 
   const loadQuestions = () => {
-    const QnAs: QnA[] = qna.map((value) => ({ value, sort: Math.random() }))
+    const QnAs: QnA[] = qna[0].map((value) => ({ value, sort: Math.random() }))
       .sort((a, b) => (a.sort - b.sort))
       .map(({ value }) => ({
         question: value.question,
@@ -102,7 +103,10 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
+      <LanguageProvider>
+        <Navbar />
+      </LanguageProvider>
+      
       <div className="flex flex-col items-center">
         <Status
           currentQuestion={currentQuestion}
