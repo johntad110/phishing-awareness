@@ -7,6 +7,9 @@
     "btn4": "FINISH",
     "btn5": "Go Back",
     "btn6": "Retry",
+    "placeholder1": "Enter Your Name",
+    "placeholder2": "Enter Your Email",
+    "text1": "Test Your Awareness About Common Phishing Tactics.",
     "questions": [
       {
         "question": "You receive an email that appears to be from your bank, informing you about suspicious activity on your account. The email asks you to click a link and verify your login details. What should you do?",
@@ -111,6 +114,9 @@
     "btn4": "ጨርስ",
     "btn5": "ወደኋላ ተመለስ",
     "btn6": "አንደገና ሞክር",
+    "placeholder1": "ስም ያስገቡ",
+    "placeholder2": "ኢሜል ያስገቡ",
+    "text1": "ስለ ማስገር ጥቃት ያለዎትን ግንዛቤ ይፈትኑ።",
     "questions": [
       {
         "question": "በመለያዎ ላይ ስላሉ አጠራጣሪ እንቅስቃሴዎች የሚገልጽ ኢሜይል ከባንክዎ ይደርሰዎታል። ኢሜይሉ አገናኙን ጠቅ እንዲያደርጉ እና የመግቢያ ዝርዝሮችዎን እንዲያረጋግጡ ይጠይቅዎታል። ምን ማድረግ አለብዎት?",

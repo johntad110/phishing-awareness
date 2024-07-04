@@ -1,4 +1,5 @@
 import { FaRedo } from "react-icons/fa";
+import { useLanguage } from "./LanguageContext";
 
 type StatusProps = {
     currentQuestion: number;
@@ -15,10 +16,12 @@ const Status: React.FC<StatusProps> = ({
 }) => {
     const progress = (((currentQuestion + 1) ?? 0) / (totalQuestions ?? 1)) * 100;
 
+    const { translation } = useLanguage();
+
     return (
         <div className="mt-10 p-6 bg-white w-[80%] md:min-w-[600px] flex flex-col items-center justify-between rounded-t-2xl border border-gray-400">
             {showForm ? <h1 className="text-gray-700 text-2xl text-center">
-                Test Your Awareness About Common Phishing Tactics.
+                {translation.text1}
             </h1> :
                 <>
                     <div className={progress === 0 ? `w-full flex justify-center items-center py-2` : `w-full flex justify-between items-center mb-4`}>

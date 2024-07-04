@@ -22,6 +22,11 @@ interface LanguageTranslation {
   btn2: string;
   btn3: string;
   btn4: string;
+  btn5: string;
+  btn6: string;
+  placeholder1: string;
+  placeholder2: string;
+  text1: string;
   questions: Question[];
 }
 

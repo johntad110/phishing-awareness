@@ -36,7 +36,7 @@ const Questionnaire: React.FC<QProps> = ({ showForm, showQuestions, onStart, onN
                     <form onSubmit={handleSubmit} className="flex flex-col items-center md:min-w-[600px] min-h-28">
                         <input
                             type="text"
-                            placeholder="Enter your name"
+                            placeholder={translation.placeholder1}
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             className="border border-gray-400 p-2 mb-4 w-80 h-14"
@@ -44,7 +44,7 @@ const Questionnaire: React.FC<QProps> = ({ showForm, showQuestions, onStart, onN
                         />
                         <input
                             type="email"
-                            placeholder="Enter your email"
+                            placeholder={translation.placeholder2}
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             className="border border-gray-400 p-2 mb-4 w-80 h-14"
