@@ -57,17 +57,15 @@ function App() {
   }
 
   const loadQuestions = () => {
-    const QnAs: QnA[] = qna[language]["questions"].map((value) => ({ value, sort: Math.random() }))
-      .sort((a, b) => (a.sort - b.sort))
-      .map(({ value }) => ({
-        question: value.question,
-        choice: value.choice,
-        answer: value.answer,
-        explanation: {
-          wrong: value.explanation.wrong,
-          correct: value.explanation.correct,
-        }
-      }));
+    const QnAs: QnA[] = qna[language]["questions"].map((value) => ({
+      question: value.question,
+      choice: value.choice,
+      answer: value.answer,
+      explanation: {
+        wrong: value.explanation.wrong,
+        correct: value.explanation.correct,
+      }
+    }));
 
     setQuestions(QnAs)
   }
@@ -109,7 +107,8 @@ function App() {
   const handleOnAnswered = (answer_idx: number) => {
     setQuestions((prevQuestions) => {
       const updatedQuestions = [...prevQuestions];
-      updatedQuestions[currentQuestion].userAnswer = answer_idx;
+      const originalIndex = shuffleNumbers[currentQuestion].value;
+      updatedQuestions[originalIndex].userAnswer = answer_idx;
       return updatedQuestions;
     })
   }
@@ -131,14 +130,14 @@ function App() {
       <LanguageProvider>
         <Navbar />
 
-      <div className="flex flex-col items-center">
-        <Status
-          currentQuestion={currentQuestion}
-          totalQuestions={totalQuestions}
-          onRestart={handleRestart}
-          showForm={showForm}
-        />
-        {(showQuestions || showForm) && (
+        <div className="flex flex-col items-center">
+          <Status
+            currentQuestion={currentQuestion}
+            totalQuestions={totalQuestions}
+            onRestart={handleRestart}
+            showForm={showForm}
+          />
+          {(showQuestions || showForm) && (
             <Questionnaire
               showForm={showForm}
               showQuestions={showQuestions}
@@ -153,15 +152,15 @@ function App() {
             />
 
 
-        )}
-        {showResults && <ResultsDisplay
-          score={score}
-          totalQuestions={totalQuestions}
-          name={name}
-          goBack={handleGoBack}
-          restart={handleRestart}
-        />}
-      </div>
+          )}
+          {showResults && <ResultsDisplay
+            score={score}
+            totalQuestions={totalQuestions}
+            name={name}
+            goBack={handleGoBack}
+            restart={handleRestart}
+          />}
+        </div>
       </LanguageProvider>
     </div>
   );

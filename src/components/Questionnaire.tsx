@@ -28,7 +28,8 @@ const Questionnaire: React.FC<QProps> = ({ showForm, showQuestions, onStart, onN
     const { handleAnswer, translation } = useLanguage();
 
 
-    const qnA = translation.questions[order.map(o => (o.value))[currentQuestion]];
+    const originalIndex = order.length > 0 && order[currentQuestion] ? order[currentQuestion].value : 0;
+    const qnA = translation.questions[originalIndex];
     return (
         <div className="mt-6 p-9 flex flex-col justify-between bg-white w-[80%] md:min-w-[600px] rounded-b-2xl border border-gray-400">
             {showForm && (
@@ -74,7 +75,7 @@ const Questionnaire: React.FC<QProps> = ({ showForm, showQuestions, onStart, onN
                                 <div
                                     key={idx}
                                     onClick={() => {
-                                        handleAnswer(currentQuestion, idx);
+                                        handleAnswer(originalIndex, idx);
                                         onAnswered(idx);
                                     }}
                                     className={`bg-gray-100 p-2 rounded-lg hover:cursor-pointer border border-gray-100 ${!isSelected && `hover:bg-white hover:border-gray-100`} transition-all ${backgroundColor}`}
