@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { QnA, shuffle } from "../App";
+import { useState } from "react";
+import { shuffle } from "../App";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import { useLanguage } from "./LanguageContext";
 
@@ -26,7 +26,7 @@ const Questionnaire: React.FC<QProps> = ({ showForm, showQuestions, onStart, onN
     }
 
     const { handleAnswer, translation } = useLanguage();
-    
+
 
     const qnA = translation.questions[order.map(o => (o.value))[currentQuestion]];
     return (
@@ -73,7 +73,10 @@ const Questionnaire: React.FC<QProps> = ({ showForm, showQuestions, onStart, onN
                             return (
                                 <div
                                     key={idx}
-                                    onClick={() => handleAnswer(currentQuestion, idx)}
+                                    onClick={() => {
+                                        handleAnswer(currentQuestion, idx);
+                                        onAnswered(idx);
+                                    }}
                                     className={`bg-gray-100 p-2 rounded-lg hover:cursor-pointer border border-gray-100 ${!isSelected && `hover:bg-white hover:border-gray-100`} transition-all ${backgroundColor}`}
                                 >
                                     {String.fromCharCode(65 + idx)}. {c}
